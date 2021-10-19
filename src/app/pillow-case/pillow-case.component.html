@@ -1,0 +1,25 @@
+<!-- Section Title -->
+<div class="row text-center">
+  <div class="col-sm-12">
+    <h2>My Candy Bag</h2>
+  </div>
+</div>
+
+<!-- Candy Bag -->
+<div class="row">
+  <div class="col-sm-12 bag">
+    <!-- Items -->
+    <div class="candy" *ngFor="let candy of myCandies">
+      <p>{{ candy.name }}</p>
+    </div>
+  </div>
+</div>
+
+<!-- Dump Button -->
+<div class="row mt-2">
+  <div class="col-sm-6 mx-auto">
+    <button class="btn btn-info" style="width: 100%" (click)="onEatAllCandy()">
+      Eat all candy
+    </button>
+  </div>
+</div>

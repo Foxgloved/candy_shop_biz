@@ -1,0 +1,28 @@
+<!-- Section Title -->
+<div class="row text-center">
+  <div class="col-sm-12">
+    <h2>The Candy Shop</h2>
+  </div>
+</div>
+
+<!-- Candy Store -->
+<div class="row store">
+  <div class="col-sm-12">
+    <div
+      class="candy"
+      *ngFor="let candy of candiesForSale"
+      (click)="onSaveCandyToBag(candy.name)"
+    >
+      <p>{{ candy.name }}</p>
+    </div>
+  </div>
+</div>
+
+<!-- New Candy Delivery -->
+<div class="row mt-2">
+  <div class="col-sm-6 mx-auto">
+    <button class="btn btn-info" style="width: 100%" (click)="onNewDelivery()">
+      Bring in delivery
+    </button>
+  </div>
+</div>
